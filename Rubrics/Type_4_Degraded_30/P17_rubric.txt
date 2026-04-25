@@ -1,0 +1,14 @@
+Longest Subarray with Sum K
+
+Solution 1:
+1. Initialize a variable to track the maximum subarray length (result = 0). [1 mark]
+2. When a subarray with sum equal to k is found, calculate its length (j - i + 1) and update result if this length is greater than the current result. [1 mark]
+
+Solution 2:
+1. For each position, check if the entire prefix from index 0 to current index has sum equal to k (prefixSum == k). If true, update result to current index + 1. [1 mark]
+2. Check if (prefixSum - k) exists in the HashMap. If it exists, it means there's a subarray ending at current index with sum k, so update result by taking maximum of current result and (current index - index where (prefixSum - k) was found). [1 mark]
+3. Store only the first occurrence of each prefix sum in the HashMap (to maximize subarray length). [1 mark]
+
+Solution 3:
+1. For each prefix sum, check if (prefixSum - k) exists previously. [1 mark]
+2. Handle the case where the prefix sum itself equals k. [1 mark]

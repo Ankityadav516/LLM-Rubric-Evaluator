@@ -1,0 +1,15 @@
+First 1 in a Sorted Binary Array
+
+Solution 1: Binary Search Approach
+1. Initialize pointers to track the search range [1 mark]
+2. Implement a binary search loop with proper termination conditions [1 mark]
+3. Correctly adjust search range based on comparison results [2 marks]
+
+Solution 2: Linear Search Approach
+1. Correctly identify and return the first occurrence of 1 [2 marks]
+2. Handle the case when no 1 is present in the array [1 mark]
+
+Solution 3: Alternative Binary Search Implementation
+1. Implement binary search with correct loop condition [1 mark]
+2. Update tracking variable when potential match is found [1 mark]
+3. Correctly narrow search space in each iteration [1 mark]

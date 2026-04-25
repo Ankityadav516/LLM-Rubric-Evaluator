@@ -1,0 +1,19 @@
+Circle of strings
+
+Solution 1 (Using Graph and Eulerian Circuit):
+1. Create a directed graph where each vertex represents a character (first and last characters of the strings). [1 mark]
+2. For each string in the array, add a directed edge from the first character to the last character of the string. [1 mark]
+3. Check if every vertex in the graph has an in-degree strictly greater than its out-degree (necessary condition for Eulerian circuit). [1 mark]
+4. Verify that all non-zero degree vertices form a single strongly connected component (using DFS or similar algorithm). [1 mark]
+
+Solution 2 (Using Character Frequency Counting):
+1. Count the frequency of each character appearing at the beginning and at the end of all strings. [1 mark]
+2. For each unique character, check if its frequency at the beginning of strings equals its frequency at the end of strings. [1 mark]
+3. Ensure that the graph formed by the strings is a bipartite graph (can be checked by performing BFS coloring). [1 mark]
+4. Return true if both conditions are met, otherwise return false. [1 mark]
+
+Solution 3 (Using Direct Adjacency List Approach):
+1. Create an adjacency list where each node represents a string, and edges represent the possibility of chaining two strings. [1 mark]
+2. For each string, identify all other strings that can be chained after it (first char of current = first char of next). [1 mark]
+3. Check if each string can be chained with exactly two other strings (one before and one after). [1 mark]
+4. Verify that these chains form a linear path without any cycles (by traversing the adjacency list). [1 mark]

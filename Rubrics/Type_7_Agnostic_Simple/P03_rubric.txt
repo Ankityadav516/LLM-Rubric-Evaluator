@@ -1,0 +1,3 @@
+Simple Agnostic Evaluation Rubric
+1. Core Functionality [5 marks]: Does the logic solve the primary objective of the problem without major flaws?
+2. Efficiency & Cleanliness [5 marks]: Is the code reasonably optimal, readable, and free of massive syntax errors?

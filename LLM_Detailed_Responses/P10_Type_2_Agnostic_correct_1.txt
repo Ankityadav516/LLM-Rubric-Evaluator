@@ -1,0 +1,92 @@
+Problem: P10
+Rubric: Type_2_Agnostic
+Submission: correct_1.java
+=========================================
+            LLM FULL RESPONSE            
+=========================================
+
+I'll analyze this submission step by step against each rubric criterion.
+
+---
+
+## Step-by-Step Analysis
+
+### 1. Logical Correctness [4 marks]
+
+The student implements a recursive Fibonacci solution.
+
+- Base case: `if(n == 0 || n == 1) return n;` → F(0) = 0, F(1) = 1 ✅
+- Recursive case: `return nthFibonacci(n-1) + nthFibonacci(n-2);` ✅
+
+Testing against examples:
+- n=5: F(5) = F(4)+F(3) = ... = 5 ✅
+- n=0: returns 0 ✅
+- n=1: returns 1 ✅
+
+The logic is **completely correct** for all standard test cases. **Full marks: 4/4**
+
+---
+
+### 2. Time & Space Efficiency [2 marks]
+
+The student uses **naive recursion** without memoization or dynamic programming.
+
+- **Time complexity**: O(2^n) — exponential due to redundant recomputation of subproblems.
+- **Space complexity**: O(n) call stack depth.
+
+An optimal solution would use iterative DP or memoization for O(n) time and O(1) or O(n) space. The naive recursive approach is significantly suboptimal. For n ≤ 30, it still runs (2^30 ≈ 1 billion operations — borderline but may TLE in strict judges), but it is not the optimal approach.
+
+This is a well-known inefficiency. **Partial marks: 1/2**
+
+---
+
+### 3. Edge Case Handling [2 marks]
+
+- n=0: handled correctly via base case ✅
+- n=1: handled correctly via base case ✅
+- n=30 (max constraint): The recursion will work correctly (no overflow for int since F(30)=832040), though it will be slow. No null/negative input handling is needed since constraints specify 0 ≤ n ≤ 30 and the input is a primitive int. ✅
+
+Edge cases within the given constraints are properly handled. **Full marks: 2/2**
+
+---
+
+### 4. Code Compilability & Syntax [1 mark]
+
+The compiler response confirms: **Compilation Successful**. The code is syntactically correct. **Full marks: 1/1**
+
+---
+
+### 5. Readability & Structure [1 mark]
+
+- Method name `nthFibonacci` is meaningful ✅
+- Base case is clearly separated ✅
+- Recursive call is clean and easy to follow ✅
+- Code is concise and well-structured ✅
+
+**Full marks: 1/1**
+
+---
+
+## Summary
+
+| Criterion | Marks Awarded | Max |
+|---|---|---|
+| Logical Correctness | 4 | 4 |
+| Time & Space Efficiency | 1 | 2 |
+| Edge Case Handling | 2 | 2 |
+| Compilability & Syntax | 1 | 1 |
+| Readability & Structure | 1 | 1 |
+| **Total** | **9** | **10** |
+
+```json
+{
+    "chosen_approach": "Solution 1",
+    "marks": {
+        "Logical Correctness: Base cases F(0)=0 and F(1)=1 are correctly handled. Recursive case F(n)=F(n-1)+F(n-2) is correctly implemented. All provided examples produce correct output.": 4,
+        "Time & Space Efficiency: Naive recursion used with O(2^n) time complexity due to redundant subproblem recomputation. An iterative or memoized DP approach would be O(n) time. Not optimal.": 1,
+        "Edge Case Handling: n=0 and n=1 are explicitly handled as base cases. n=30 (max constraint) is handled correctly without overflow. All boundary values within constraints are safe.": 2,
+        "Code Compilability & Syntax: Compilation confirmed successful. No syntax errors present.": 1,
+        "Readability & Structure: Method name is descriptive, base case and recursive case are clearly separated, logic is easy to follow and concise.": 1
+    }
+}
+```

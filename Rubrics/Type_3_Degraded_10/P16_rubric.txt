@@ -1,0 +1,21 @@
+Frequencies in a Limited Array
+
+Solution 1: Using a frequency array
+1. Traverse the input array and increment the count at the corresponding index (arr[i]-1) in the frequency array. [1 mark]
+2. Check for edge cases such as elements that are outside the range of 1 to n (though the constraint states all elements will be in range). [1 mark]
+3. Return the frequency array which represents the count of each number from 1 to n. [1 mark]
+
+Solution 2: In-place counting using negative marking
+1. Traverse the array and use elements as indices to mark frequencies by making elements negative. [1 mark]
+2. Handle already processed elements (negative or zero values) correctly during the traversal. [1 mark]
+3. Perform a second pass to convert negative values to their absolute values (frequencies) and replace other values with 0. [1 mark]
+
+Solution 3: Using a hash map
+1. Initialize an empty hash map to store the frequency of each element. [1 mark]
+2. Initialize a result array of size n with all zeros. [1 mark]
+3. For each possible number from 1 to n, update the result array with the corresponding frequency from the hash map (0 if not present). [1 mark]
+
+Solution 4: Sort and count
+1. Sort the input array in ascending order. [1 mark]
+2. Initialize a result array of size n with all zeros. [1 mark]
+3. Update the result array with the frequencies of each number from 1 to n. [1 mark]

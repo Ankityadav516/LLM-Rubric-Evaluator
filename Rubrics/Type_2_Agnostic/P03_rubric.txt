@@ -1,0 +1,6 @@
+Question Agnostic Evaluation Rubric
+1. Logical Correctness [4 marks]: Does the code fulfill the core objective without failing on standard test cases?
+2. Time & Space Efficiency [2 marks]: Is the chosen algorithm optimal, or does it use unnecessary nested loops or extra memory?
+3. Edge Case Handling [2 marks]: Does the code safely handle null inputs, empty arrays, or extreme boundary values?
+4. Code Compilability & Syntax [1 mark]: Does the code compile cleanly without syntax errors?
+5. Readability & Structure [1 mark]: Are variables named meaningfully and is the logic easy to follow?

@@ -1,0 +1,30 @@
+Largest Product 
+
+Solution 1: Sliding Window Approach
+1. Initializes a variable to track the product and a variable to track maximum product found [1 mark]
+2. Implements sliding window logic to maintain a window of size k [2 marks]:
+   * Multiplies current element to the product
+   * Handles case when window size is less than k (expanding phase)
+   * Handles case when window size equals k (sliding phase)
+3. Correctly updates maximum product when window size reaches k [1 mark]
+4. Correctly handles division by the leftmost element when sliding the window [1 mark]
+
+Solution 2: Brute Force Approach
+1. Correctly sets up nested loops to examine all subarrays of size k [1 mark]
+2. Maintains and updates the maximum product found across all subarrays [1 mark]
+3. Handles edge cases such as when array length is less than k [1 mark]
+
+Solution 3: Prefix Products Approach
+1. Correctly calculates prefix products for the entire array [1 mark]
+2. Uses prefix products to find product of any subarray of size k in O(1) time [2 marks]
+3. Properly handles edge cases including zeros in the array [1 mark]
+
+Solution 4: Two-Pointer Technique
+1. Maintains correct product while sliding the window through the array [1 mark]
+2. Updates maximum product only when window size reaches k [1 mark]
+3. Analyzes time complexity as O(n) and space complexity as O(1) [1 mark]
+
+Solution 5: Logarithm-Based Approach
+1. Properly adds new elements and removes elements leaving the window [1 mark]
+2. Converts back from logarithm space to obtain the final result [1 mark]
+3. Discusses precision limitations of floating-point arithmetic [1 mark]

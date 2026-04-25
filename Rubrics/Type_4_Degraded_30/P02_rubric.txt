@@ -1,0 +1,12 @@
+Last index of One 
+
+Solution 1: Backward Traversal
+1. Traverse the string from the end toward the beginning (right to left) [1 mark]
+2. Return -1 if no '1' is found in the string [1 mark]
+
+Solution 2: Forward Traversal with Variable Tracking
+1. Traverse the string from beginning to end (left to right) [1 mark]
+2. Update the tracking variable whenever a '1' is encountered [1 mark]
+
+Solution 3: Using Built-in String Functions
+1. Use a built-in string function to find the last occurrence of '1' [2 marks]

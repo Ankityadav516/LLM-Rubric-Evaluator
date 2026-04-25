@@ -1,0 +1,13 @@
+Check if a Linked List is Palindrome:
+
+1. Solution 1: Using Stack Approach
+    1. Reset to the head of the linked list and compare each node's data with the value popped from the stack. [1 mark]
+    2. If the entire list is traversed with all comparisons being equal, return true (the list is a palindrome). [1 mark]
+
+2. Solution 2: Recursive Approach
+    1. Initialize a starting pointer (reference to head) to track forward traversal. [1 mark]
+    2. Update the start pointer after each comparison and return the combined result (true only if all comparisons are equal). [1 mark]
+
+3. Solution 3: Optimized Iterative Approach (Two-Pointer)
+    1. Find the middle of the linked list using slow and fast pointers technique. [1 mark]
+    2. Compare the first half with the reversed second half by traversing both simultaneously and checking if values match. [1 mark]
